@@ -39,3 +39,10 @@ if you have to start implementing the solidus on your local machine this link wi
   # if find error "unknown attribute 'service_name' for ActiveStorage::Blob "
   rails active_storage:update
   rails db:migrate
+
+  # Access
+  - localhost:3000
+  - localhost:3000/admin
+
+  U: admin@example.com
+  P: test123
