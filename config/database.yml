@@ -3,6 +3,7 @@ default: &default
   adapter: postgresql
   host: localhost
   pool: 10
+  # user: postgres
   timeout: 5000
 
 development:

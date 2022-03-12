@@ -52,14 +52,15 @@ Spree.config do |config|
   # Please note that you need to use the solidus_stripe gem to have
   # Stripe working: https://github.com/solidusio-contrib/solidus_stripe
   #
-  # config.static_model_preferences.add(
-  #   Spree::PaymentMethod::StripeCreditCard,
-  #   'stripe_env_credentials',
-  #   secret_key: ENV['STRIPE_SECRET_KEY'],
-  #   publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
-  #   server: Rails.env.production? ? 'production' : 'test',
-  #   test_mode: !Rails.env.production?
-  # )
+  config.static_model_preferences.add(
+    Spree::PaymentMethod::StripeCreditCard,
+    'stripe_env_credentials',
+    secret_key: ENV['STRIPE_SECRET_KEY'],
+    publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
+    stripe_country: 'US',
+    v3_elements: false,
+    v3_intents: false
+  )
 end
 
 Spree::Frontend::Config.configure do |config|
